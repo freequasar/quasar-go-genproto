@@ -1,0 +1,11 @@
+version: v2
+managed:
+  enabled: true
+  override:
+    - file_option: go_package_prefix
+      value: github.com/freequasar/quasar-go-genproto/proto
+plugins:
+  - local: protoc-gen-go
+    out: proto
+    strategy: all
+    opt: paths=source_relative
